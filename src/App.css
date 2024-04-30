@@ -135,3 +135,14 @@ body{
     background-color: white;
     color: black;
 }
+
+@media screen and (max-width: 800px){
+    .container-items{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 450px){
+    .container-items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
