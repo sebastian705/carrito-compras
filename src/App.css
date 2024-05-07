@@ -140,9 +140,21 @@ body{
     .container-items{
         grid-template-columns: repeat(3, 1fr);
     }
+    .item img{
+        height: 250px;
+    }
+    .container-items{
+        gap: 1.5rem;
+    }
 }
 @media screen and (max-width: 450px){
     .container-items{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .item img{
+        height: 200px;
+    }
+    .container-items{
+        gap: 1rem;
     }
 }
