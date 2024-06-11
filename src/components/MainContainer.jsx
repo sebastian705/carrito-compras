@@ -3,7 +3,8 @@ import ProductItem from './Product';
 import { useStore } from '../store/store';
 
 const MainContainer = () => {
-    const { products, setPrice, price, counter, setCounter, cartProducts, setCartProducts } = useStore();
+    const { products, setPrice, price, counter,
+        setCounter, cartProducts, setCartProducts } = useStore();
 
     function addCart(product) {
         let obj = { ...product, quantity: 1 }
@@ -19,9 +20,9 @@ const MainContainer = () => {
         }
         setPrice(price + (obj.price * obj.quantity));
         setCounter(counter + obj.quantity);
-        setCartProducts([...products, obj]);
+        setCartProducts([...cartProducts, obj]);
     }
-    console.log(products);
+    console.log(cartProducts);
     return (
         <main className='main'>
             <section className='container-items'>
