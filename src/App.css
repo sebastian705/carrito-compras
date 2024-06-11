@@ -59,6 +59,9 @@ body{
     color: red;
     cursor:pointer;
 }
+.product{
+    width: 200px;
+}
 .total-price-products{
     padding: .5rem;
     display: flex;

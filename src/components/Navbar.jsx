@@ -1,17 +1,19 @@
 import React from 'react'
-import { useState } from 'react'
 import ProductCart from './ProductCart';
+import { useState } from 'react'
+import { useStore } from '../store/store';
 
-function Navbar({ products, setProducts, contador, setContador, precio, setPrecio }) {
+function Navbar() {
+    const { price, setPrice, counter, setCounter, cartProducts, setCartProducts } = useStore();
     const [display, setDisplay] = useState("none");
     function openCart() {
         if (display == "none") setDisplay("block");
         else setDisplay("none");
     }
-    const deleteProduct = producto => {
-        setProducts(products.filter(product => product.id !== producto.id));
-        setContador(contador - producto.quantity);
-        setPrecio(precio - (producto.price * producto.quantity));
+    const deleteCartProduct = producto => {
+        setCartProducts(cartProducts.filter(product => product.id !== producto.id));
+        setCounter(counter - producto.quantity);
+        setPrice(price - (producto.price * producto.quantity));
     }
     return (
         <header className='header'>
@@ -21,19 +23,23 @@ function Navbar({ products, setProducts, contador, setContador, precio, setPreci
                     <div className="icon">
                         <i className="fa-solid fa-cart-shopping" onClick={openCart}></i>
                     </div>
-                    <span className="contador">{contador}</span>
+                    <span className="contador">{counter}</span>
                 </div>
                 <div className="container-cart-products" style={{ display: display }}>
                     {
-                        products.length ? (
+                        cartProducts.length ? (
                             <>
                                 <div className="row-cart-products">
-                                    {products.map((product, index) => (
-                                        <ProductCart product={product} key={index} deleteProduct={deleteProduct}/>
+                                    {cartProducts.map((cartProduct) => (
+                                        <ProductCart 
+                                        cartProduct={cartProduct} 
+                                        deleteCartProduct={deleteCartProduct} 
+                                        key={cartProduct.id} 
+                                        />
                                     ))}
                                 </div>
                                 <div className="total-price-products">
-                                    Total: <span className="total-price">${precio.toFixed(2)}</span>
+                                    Total: <span className="total-price">${price.toFixed(2)}</span>
                                 </div>
                             </>
                         ) : <span className="cart-empty">No hay productos en el carrito</span>

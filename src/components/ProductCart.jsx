@@ -1,12 +1,11 @@
 
-
-const ProductCart = ({ product, deleteProduct }) => {
+const ProductCart = ({ cartProduct, deleteCartProduct }) => {
   return (
-    <div className="cart-product">
-      <p className="cantidad">{product.quantity}</p>
-      <p className="product">{product.title}</p>
-      <span className="price">${product.price}</span>
-      <i onClick={() => deleteProduct(product)} className="fa-solid fa-trash"></i>
+    <div className="cart-cartProduct">
+      <p className="cantidad">{cartProduct.quantity}</p>
+      <p className="cartProduct">{cartProduct.title}</p>
+      <span className="price">${cartProduct.price}</span>
+      <i onClick={() => deleteCartProduct(cartProduct)} className="fa-solid fa-trash"></i>
     </div>
   )
 
