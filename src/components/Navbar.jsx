@@ -29,7 +29,7 @@ function Navbar({ products, setProducts, contador, setContador, precio, setPreci
                             <>
                                 <div className="row-cart-products">
                                     {products.map((product, index) => (
-                                        <ProductCart product={product} key={index}/>
+                                        <ProductCart product={product} key={index} deleteProduct={deleteProduct}/>
                                     ))}
                                 </div>
                                 <div className="total-price-products">

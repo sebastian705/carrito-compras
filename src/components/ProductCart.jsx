@@ -1,6 +1,6 @@
 
 
-const ProductCart = ({ product }) => {
+const ProductCart = ({ product, deleteProduct }) => {
   return (
     <div className="cart-product">
       <p className="cantidad">{product.quantity}</p>
