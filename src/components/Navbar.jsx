@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import ProductCart from './ProductCart';
 
 function Navbar({ products, setProducts, contador, setContador, precio, setPrecio }) {
     const [display, setDisplay] = useState("none");
@@ -7,7 +8,7 @@ function Navbar({ products, setProducts, contador, setContador, precio, setPreci
         if (display == "none") setDisplay("block");
         else setDisplay("none");
     }
-    const deleteProduct = producto =>{
+    const deleteProduct = producto => {
         setProducts(products.filter(product => product.id !== producto.id));
         setContador(contador - producto.quantity);
         setPrecio(precio - (producto.price * producto.quantity));
@@ -27,13 +28,8 @@ function Navbar({ products, setProducts, contador, setContador, precio, setPreci
                         products.length ? (
                             <>
                                 <div className="row-cart-products">
-                                    {products.map((product, index) =>(
-                                    <div className="cart-product" key={index}>
-                                        <p className="cantidad">{product.quantity}</p>
-                                        <p className="product">{product.title}</p>
-                                        <span className="price">${product.price}</span>
-                                        <i onClick={()=> deleteProduct(product)} className="fa-solid fa-trash"></i>
-                                    </div>
+                                    {products.map((product, index) => (
+                                        <ProductCart product={product} key={index}/>
                                     ))}
                                 </div>
                                 <div className="total-price-products">
