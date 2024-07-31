@@ -4,7 +4,7 @@ Este proyecto es una aplicación web de carrito de compras construida con React.
 
 ## Captura de pantalla
 
-![Captura de Pantalla de la Aplicación](assets/carrito-compras.png)
+![Captura de Pantalla de la Aplicación](src/assets/carrito-compras.png)
 
 ## Características
 
