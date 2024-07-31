@@ -19,7 +19,7 @@ Este proyecto es una aplicación web de carrito de compras construida con React.
 
 ## Tecnologías Utilizadas
 
-- **React: Biblioteca principal para la construcción de la interfaz de usuario.
-- **React Router: Para la navegación en la aplicación.
-- **Axios: Para realizar solicitudes HTTP a la API pública.
-- **Local Storage: Para persistir el estado del carrito de compras en el navegador.
+- **React:** Biblioteca principal para la construcción de la interfaz de usuario.
+- **React Router:** Para la navegación en la aplicación.
+- **Axios:** Para realizar solicitudes HTTP a la API pública.
+- **Local Storage:** Para persistir el estado del carrito de compras en el navegador.
