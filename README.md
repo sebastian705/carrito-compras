@@ -2,6 +2,10 @@
 
 Este proyecto es una aplicación web de carrito de compras construida con React. La aplicación consume una API pública para obtener la lista de productos disponibles y permite a los usuarios agregar productos al carrito, modificar la cantidad y eliminar productos del carrito.
 
+## Captura de pantalla
+
+![Captura de Pantalla de la Aplicación](assets/carrito-compras.png)
+
 ## Características
 
 - **Visualización de productos:** Muestra una lista de productos obtenidos de una API pública.
