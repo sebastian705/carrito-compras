@@ -5,16 +5,7 @@ import Navbar from './components/Navbar';
 import MainContainer from './components/MainContainer';
 
 function App() {
-  const { setProducts } = useStore();
-  useEffect(() => {
-    setProducts();
-  }, [])
-  return (
-    <>
-      <Navbar />
-      <MainContainer />
-    </>
-  )
+  return <div>app</div>
 }
 
 export default App

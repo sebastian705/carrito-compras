@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+#root {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* header */
+.header {
+  background-color: #f1f2f3;
+  width: 100%;
+  height: 60px;
+  padding: .5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.container-cart {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+}
+
+.icon {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.contador {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.2rem;
+  background-color: red;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vmax;
+}
+
+.container-cart-products {
+  position: absolute;
+  padding: 0 16px;
+  width: 500px;
+  top: 65px;
+  right: 0;
+  background-color: white;
+  border-radius: 1rem;
+  gap: .2rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
+  z-index: 11;
+}
+
+.cart-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-product i:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.product {
+  width: 200px;
+}
+
+.total-price-products {
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cart-empty {
+  display: block;
+  text-align: center;
+  padding: .5rem 0;
+}
+
+/* main */
+.main {
+  background-color: white;
+  padding: 2rem;
+}
+
+.container-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: 1rem;
+}
+
+.item {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+  overflow: hidden;
+}
+
+.item figure {
+  width: 100%;
+  height: 250px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+
+.item:hover figure img {
+  transform: scale(1.2);
+}
+
+.info-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: .8rem;
+  gap: .2rem;
+}
+
+.nombre-item {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.price-item {
+  flex: 1;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-add-cart {
+  background-color: white;
+  font-size: 1rem;
+  padding: .5rem;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.btn-add-cart img {
+  width: 20px;
+  height: 20px;
+}
+
+.link {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+}
+
+.link:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Pagina de producto solo*/
+
+.link-back {
+  display: inline-block;
+  text-decoration: none;
+  color: #167ee6;
+  margin: 16px;
+}
+
+.link-back:hover {
+  text-decoration: underline;
+}
+
+.page-product-info {
+  margin: 20px auto;
+  width: 90%;
+  border: 1px solid black;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 15px;
+  border-bottom-width: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.page-product-info figure {
+  width: min(100%, 380px);
+  margin: 0;
+  justify-self: center;
+}
+
+.page-product-info img {
+  width: 100%;
+}
+
+.page-product-info .product-info {
+  flex: 70%;
+  height: 100%;
+}
+
+.page-product-info .product-info p {
+  color: #252525;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 750px) {
+  .page-product-info{
+    flex-direction: column;
+  }
+}
+
+/*
+@media screen and (max-width: 450px) {
+    .container-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item img {
+        height: 200px;
+    }
+
+    .container-items {
+        gap: 1rem;
+    }
+}*/
